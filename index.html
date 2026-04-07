@@ -29,6 +29,7 @@
         <a href="#how-it-works" class="nav-link">How It Works</a>
         <a href="#walkthrough" class="nav-link">Walkthrough</a>
         <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#" id="commands-toggle" class="nav-link">Bot Commands</a>
         <a
           href="https://t.me/askpdfaibot"
           class="nav-cta"
@@ -356,6 +357,45 @@
       <div class="footer-copy">&copy; 2025 Ask PDF AI. All rights reserved.</div>
     </div>
   </footer>
+
+  <!-- Commands Slide-over -->
+  <div class="commands-overlay" id="commands-overlay"></div>
+  <aside class="commands-panel" id="commands-panel" aria-label="Bot Commands">
+    <div class="commands-header">
+      <h2 class="commands-title">Bot Commands</h2>
+      <button class="commands-close" id="commands-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="commands-body">
+      <div class="command-item">
+        <div class="command-name">/start</div>
+        <p class="command-desc">Begin your session. The bot greets you and explains how to get started.</p>
+      </div>
+      <div class="command-item">
+        <div class="command-name">Send a PDF</div>
+        <p class="command-desc">Drop any PDF file into the chat. The bot reads, extracts, and indexes it so you can ask questions.</p>
+      </div>
+      <div class="command-item">
+        <div class="command-name">Ask a question</div>
+        <p class="command-desc">Type any question in plain language. If a PDF is loaded, the bot answers from it. Otherwise, it uses general AI chat.</p>
+      </div>
+      <div class="command-item">
+        <div class="command-name">/status</div>
+        <p class="command-desc">Check your remaining credit balance. Each PDF question costs 1 credit.</p>
+      </div>
+      <div class="command-item">
+        <div class="command-name">/clear</div>
+        <p class="command-desc">Remove the current PDF and reset usage. Upload a new PDF to start over.</p>
+      </div>
+      <div class="command-item">
+        <div class="command-name">/mini</div>
+        <p class="command-desc">Open the Telegram Mini App to buy more credits via TON.</p>
+      </div>
+      <div class="command-item">
+        <div class="command-name">/stop</div>
+        <p class="command-desc">End the conversation with the bot.</p>
+      </div>
+    </div>
+  </aside>
 
   <script src="js/main.js"></script>
 </body>
