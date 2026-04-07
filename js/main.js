@@ -69,8 +69,48 @@
         navToggle.classList.remove("active");
         navToggle.setAttribute("aria-expanded", "false");
         document.body.style.overflow = "";
+        closeCommands();
       }
     });
+  }
+
+  /* ---------- Commands Slide-over ---------- */
+  var commandsToggle = document.getElementById("commands-toggle");
+  var commandsPanel  = document.getElementById("commands-panel");
+  var commandsOverlay = document.getElementById("commands-overlay");
+  var commandsClose  = document.getElementById("commands-close");
+
+  function openCommands() {
+    commandsPanel.classList.add("active");
+    commandsOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCommands() {
+    commandsPanel.classList.remove("active");
+    commandsOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  if (commandsToggle) {
+    commandsToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Close mobile nav if open
+      if (navMenu) navMenu.classList.remove("open");
+      if (navToggle) {
+        navToggle.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+      openCommands();
+    });
+  }
+
+  if (commandsClose) {
+    commandsClose.addEventListener("click", closeCommands);
+  }
+
+  if (commandsOverlay) {
+    commandsOverlay.addEventListener("click", closeCommands);
   }
 
   /* ---------- Nav Scroll Effect ---------- */
